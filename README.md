@@ -19,12 +19,12 @@ gcloud run deploy crystal-webserver --image [IMAGE]
 
 or
 
-gcloud beta run deploy crystal-webserver --source . \
---platform managed --allow-unauthenticated
+`gcloud beta run deploy crystal-webserver --source . \
+--platform managed --allow-unauthenticated`
 
 ## Execute on Cloud Run
-gcloud run deploy crystal-webserver --image <Cloud Artifact/Registry>\
---platform managed --allow-unauthenticated
+`gcloud run deploy crystal-webserver --image <Cloud Artifact/Registry> \
+--platform managed --allow-unauthenticated`
 
 ## Clean up
 gcloud run services delete crystal-webserver
