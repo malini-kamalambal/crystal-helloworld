@@ -14,6 +14,7 @@ docker build -t crystal-web-server:0.1 .
 
 ## Build using Cloud Build, then push to GCR/Artifact
 gcloud builds submit --tag [IMAGE] 
+
 gcloud run deploy crystal-webserver --image [IMAGE]
 
 or
