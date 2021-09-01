@@ -21,7 +21,7 @@ gcloud builds submit --tag gcr.io/PROJECT_ID/IMAGE_NAME
 
 or
 
-### Build, push (to Artifact Registry) and deploy in one command
+## Build, push (to Artifact Registry) and deploy in one command
 ``` bash
 gcloud beta run deploy crystal-webserver --source . \
 --platform managed --allow-unauthenticated
