@@ -10,7 +10,9 @@ to the Ruby language, but it is compiled.  The following
 docker image is only a few MB in size.
 
 ## Build a docker container, using docker
+``` bash
 docker build -t crystal-web-server:0.1 .
+```
 
 ## Build using Cloud Build, then push to GCR/Artifact
 ``` bash
