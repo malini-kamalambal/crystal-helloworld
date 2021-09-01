@@ -14,14 +14,15 @@ docker image is only a few MB in size.
 docker build -t crystal-web-server:0.1 .
 ```
 
-## Build using Cloud Build, then push to GCR/Artifact
+## Build using Cloud Build (automatically pushed to GCR)
 ``` bash
-gcloud builds submit --tag [IMAGE] 
+gcloud builds submit --tag gcr.io/PROJECT_ID/IMAGE_NAME
 gcloud run deploy crystal-webserver --image [IMAGE]
 ```
 
 or
 
+### Build, push (to Artifact Registry) and deploy in one command
 ``` bash
 gcloud beta run deploy crystal-webserver --source . \
 --platform managed --allow-unauthenticated
