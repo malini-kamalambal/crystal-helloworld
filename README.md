@@ -17,7 +17,6 @@ docker build -t crystal-web-server:0.1 .
 ## Build using Cloud Build (automatically pushed to GCR)
 ``` bash
 gcloud builds submit --tag gcr.io/PROJECT_ID/IMAGE_NAME
-gcloud run deploy crystal-webserver --image [IMAGE]
 ```
 
 or
@@ -30,7 +29,7 @@ gcloud beta run deploy crystal-webserver --source . \
 
 ## Execute on Cloud Run
 ``` bash
-gcloud run deploy crystal-webserver --image <Cloud Artifact/Registry> \
+gcloud run deploy crystal-webserver --image [IMAGE] \
 --platform managed --allow-unauthenticated
 ```
 
