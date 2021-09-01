@@ -13,8 +13,8 @@ docker image is only a few MB in size.
 docker build -t crystal-web-server:0.1 .
 
 ## Build using Cloud Build, then push to GCR/Artifact
-docker tag ...
-docker push <Cloud Artifact/Registry>
+gcloud builds submit --tag [IMAGE] 
+gcloud run deploy crystal-webserver --image [IMAGE]
 
 or
 
