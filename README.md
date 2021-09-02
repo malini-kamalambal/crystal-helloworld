@@ -27,10 +27,20 @@ gcloud beta run deploy crystal-webserver --source . \
 --platform managed --allow-unauthenticated
 ```
 
-## Execute on Cloud Run
+## Deploy on Cloud Run
 ``` bash
 gcloud run deploy crystal-webserver --image [IMAGE] \
 --platform managed --allow-unauthenticated
+```
+
+## Test
+``` bash
+curl [URL]
+```
+
+Send authorization token, if unauthenticated is not allowed
+``` bash
+curl --header "Authorization: Bearer $(gcloud auth print-identity-token)" [URL]
 ```
 
 ## Clean up
